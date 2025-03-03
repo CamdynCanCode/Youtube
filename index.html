@@ -91,7 +91,7 @@
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwVurAyKZJLicUK32HGl_Wb1LXauEumtG7dD4Ixf7FNoXaBBBefa4Wgvv-VaD9NyV14/exec';
 
     // Log visitor IP to Google Sheets
-    fetch('https://api64.ipify.org?format=json')
+    fetch('https://api4.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
             fetch(`${GOOGLE_SCRIPT_URL}?ip=${data.ip}`)
@@ -99,6 +99,7 @@
                 .then(console.log); // Optional: You can log or show response here
         })
         .catch(error => console.error("Error logging IP:", error));
+    
 </script>
 
 </body>
